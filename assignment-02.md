@@ -12,54 +12,62 @@ and push to your github repository.
 
 1. Derive asymptotic upper bounds of work for each recurrence below.
   * $W(n)=2W(n/3)+1$
+  O(n^(log_3(2)))
 .  
 .  
 .  
 .  
 .  
   * $W(n)=5W(n/4)+n$
+  O(n^(log_4(5)))
 .  
 .  
 .  
 .  
 .  
   * $W(n)=7W(n/7)+n$
+  O(nlog n)
 .  
 .  
 .  
 .  
 .  
   * $W(n)=9W(n/3)+n^2$
+  O((n^2)log n)
 .  
 .  
 .  
 .  
 .  
   * $W(n)=8W(n/2)+n^3$
-.  
+.  O((n^3)log n)
 .  
 .  
 .  
 .  
   * $W(n)=49W(n/25)+n^{3/2}\log n$
+    O(n^(3/2)log n)
 .  
 .  
 .  
 .  
 .  
   * $W(n)=W(n-1)+2$
+    O(n)
 .  
 .  
 .  
 .  
 .  
   * $W(n)= W(n-1)+n^c$, with $c\geq 1$
-.  
+.   O(n^(c+1))
 .  
 .  
 .  
 .  
   * $W(n)=W(\sqrt{n})+1$
+    O(log(log(n)))
+  
 
 
 2. Suppose that for a given task you are choosing between the following three algorithms:
@@ -67,19 +75,25 @@ and push to your github repository.
   * Algorithm $\mathcal{A}$ solves problems by dividing them into
       five subproblems of half the size, recursively solving each
       subproblem, and then combining the solutions in linear time.
+
+  O(n^(log_2(5)))
     
   * Algorithm $\mathcal{B}$ solves problems of size $n$ by
       recursively solving two subproblems of size $n-1$ and then
       combining the solutions in constant time.
+
+  O(2^n)
     
   * Algorithm $\mathcal{C}$ solves problems of size $n$ by dividing
       them into nine subproblems of size $n/3$, recursively solving
       each subproblem, and then combining the solutions in $O(n^2)$
       time.
+  O((n^2)log_3(n))
 
     What are the asymptotic running times of each of these algorithms?
     Which algorithm would you choose?
 
+I would choose algorithm C because it has the fastest asymptotic running time out of the three algorithms.
 
 3. Now that you have some practice solving recurrences, let's work on
   implementing some algorithms. In lecture we discussed a divide and
